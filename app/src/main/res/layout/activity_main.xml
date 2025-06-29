@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <!-- Barcode Scanner -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:zxing_framing_rect_width="250dp"
+        app:zxing_framing_rect_height="250dp"
+        app:zxing_preview_scaling_strategy="centerCrop" />
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan a product..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="20dp" />
+
+    <!-- Sustainability Score Progress Bar -->
+    <ProgressBar
+        android:id="@+id/sustainability_score"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar" />
+
+    <!-- Sustainability Rating -->
+    <TextView
+        android:id="@+id/sustainability_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sustainability: N/A"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:paddingTop="10dp" />
+
+</LinearLayout>
